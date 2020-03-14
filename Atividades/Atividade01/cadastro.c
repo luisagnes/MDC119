@@ -10,20 +10,20 @@ typedef struct funcionario_t{
 int main(){
     Fun funcionarios[100], funcionario;
     int total=0, i;
-    while(1){
+    while(total < 100){
         printf("Digite o nome: ");
-        scanf("%s", funcionario.nome);
+        scanf("\n%[^\n]s", funcionario.nome);
         if(funcionario.nome[0]=='0'){
             break;
         }
         printf("Digite o salario: ");
-        scanf("%lf\n", &funcionario.salario);
+        scanf("%lf", &funcionario.salario);
         printf("Digite a admissao: ");
-        scanf("%s", funcionario.admissao);
-        funcionarios[0]=funcionario;
+        scanf("\n%[^\n]s", funcionario.admissao);
+        funcionarios[total]=funcionario;
         total++;
     }
-    for(i=0; i<=total; i++){
+    for(i=0; i<total; i++){
         printf("Nome: %s\n Salario: %lf\n admissao: %s\n", funcionarios[i].nome, funcionarios[i].salario, funcionarios[i].admissao);
     }
 
